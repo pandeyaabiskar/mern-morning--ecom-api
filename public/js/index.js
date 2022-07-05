@@ -2,7 +2,7 @@ const productSection = document.querySelector('.products');
 
 const createCardAddData = (product) => {
   const productCard = `  <div class="product-card">
-  <a href="/details.html">
+  <a href="details.html">
   <div class="product-image">
     <img src=${product.image}>
   </div>
