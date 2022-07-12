@@ -3,6 +3,11 @@ const cors = require("cors");
 const productAPIRoutes = require('./routes/productapi')
 const products = require('./data.json');
 const hbs = require('hbs');
+const connectDatabase = require('./database/connection')
+
+//Connect database
+connectDatabase()
+
 
 const app = express();
 app.use(cors());
