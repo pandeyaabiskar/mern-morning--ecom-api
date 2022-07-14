@@ -6,8 +6,16 @@ const ratingSchema = new mongoose.Schema({
 })
 
 const productSchema = new mongoose.Schema({
-    title : String,
-    price : Number,
+    title : {
+        type: String,
+        minlength: [10, "Sorry, you cannot insert value less than 10"],
+        required: true,
+        trim: true
+    },
+    price : {
+        type: Number,
+        min: 1
+    },
     description : String,
     category: String,
     image : String,
